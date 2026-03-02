@@ -6,6 +6,10 @@ const PORT = 3000;
 // This allows us to read JSON data from the request body
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.json({ message: "Welcome to the Task Manager API" });
+});
+
 // We will store our tasks in this array for now
 let tasks = [];
 let nextId = 1; // Simple way to give each task a unique ID
